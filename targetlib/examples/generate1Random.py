@@ -11,13 +11,18 @@
 import sys
 import targetlib
 
-def usage():
-	print '%s' % (sys.argv[0])
 
-if len(sys.argv)<1:
-	usage()
-	exit(1)
+def usage():
+    print
+    '%s' % (sys.argv[0])
+
+
+if len(sys.argv) < 1:
+    usage()
+    exit(1)
 
 tl = targetlib.targetlib()
-print tl._generate_ip()
-print 'Done'
+print
+tl._generate_ip()
+print
+'Done'

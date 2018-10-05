@@ -20,21 +20,25 @@
 import sys
 import targetlib
 
-def usage():
-	print '%s <ip count>' % (sys.argv[0])
 
-if len(sys.argv)<2:
-	usage()
-	exit(1)
+def usage():
+    print
+    '%s <ip count>' % (sys.argv[0])
+
+
+if len(sys.argv) < 2:
+    usage()
+    exit(1)
 
 count = int(sys.argv[1])
-
 
 tl = targetlib.targetlib()
 tl.generate_random_ip(count)
 
 while tl.tgt_q.qsize() != 0:
-	tgt = tl.tgt_q.get()
-	print tgt
+    tgt = tl.tgt_q.get()
+    print
+    tgt
 
-print 'Done'
+print
+'Done'
